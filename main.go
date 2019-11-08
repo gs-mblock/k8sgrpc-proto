@@ -2,6 +2,7 @@ package main
 
 import (
 	"hellogrpc3/app"
+	"hellogrpc3/pkg/configs"
 	"log"
 	"os"
 	"os/signal"
@@ -9,8 +10,8 @@ import (
 
 func main() {
 	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
-	
-	app.RunServer(":7000")
+
+	app.RunServer(":" + configs.EnvConfig.ServerGRPCPort)
 
 	quit := make(chan os.Signal)
 	signal.Notify(quit, os.Interrupt)

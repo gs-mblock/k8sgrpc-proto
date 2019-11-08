@@ -24,13 +24,16 @@ type config struct {
 		Pwd    string `default:""`
 		Prefix string `default:"hellogrpc3|"`
 	}
+	// my
+	ServerGRPCPort string `env:"SERVER_GRPC_Port" default:"7000"`
+	GrpcUser       string `env:"GRPC_USER" default:"localhost:7001"`
 }
 
 func init() {
 	EnvConfig = new(config)
 	env.IgnorePrefix()
 	err := env.Fill(EnvConfig)
-	fmt.Println(EnvConfig)
+	fmt.Printf("evn:%+v\n", EnvConfig)
 	if err != nil {
 		panic(err)
 	}
