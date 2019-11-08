@@ -1,0 +1,29 @@
+settings:
+  legacy:
+    force: false
+    interval: 0s
+server:
+  status: true
+  open: true
+  port: 5002
+  host: localhost
+schema:
+- name: hellogrpc3
+  path: .
+  commands:
+    fmt:
+      status: true
+    run:
+      args:
+      - main.go
+      status: true
+  watcher:
+    extensions:
+    - go
+    paths:
+    - /
+    ignore:
+      paths:
+      - .git
+      - .realize
+      - vendor

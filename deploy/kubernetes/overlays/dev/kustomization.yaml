@@ -1,0 +1,14 @@
+namespace: dev-mblock
+
+bases:
+- ../../base
+
+resources:
+- namespace.yaml
+
+replicas:
+- name: hellogrpc3
+  count: 1
+
+patchesStrategicMerge:
+- deploy.yaml
