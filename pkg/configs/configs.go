@@ -26,6 +26,7 @@ type config struct {
 		Prefix string `default:"k8sgrpcsv|"`
 	}
 	// my
+	Version        string `env:"SERVER_VERSION" default:"191111.1500"`
 	ServerGRPCPort string `env:"SERVER_GRPC_Port" default:"7000"`
 	GrpcUser       string `env:"GRPC_USER" default:"localhost:7000"`
 }

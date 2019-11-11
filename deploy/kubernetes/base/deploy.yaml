@@ -55,12 +55,17 @@ kind: VirtualService
 metadata:
   name: k8sgrpcsv
 spec:
+  gateways:
+  - gateway/makeblock-gateway
   hosts:
   - k8sgrpcsv
   http:
   - route:
     - destination:
         host: k8sgrpcsv
+        port:
+          number: 7000
+        subset: v1
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
