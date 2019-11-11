@@ -1,4 +1,4 @@
-# hellogrpc3
+# k8sgrpcsv
 
 grpc test,k8s 部署最简单的grpc server;
 

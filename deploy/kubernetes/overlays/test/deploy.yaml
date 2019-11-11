@@ -1,12 +1,12 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: hellogrpc3
+  name: k8sgrpcsv
 spec:
   template:
     spec:
       containers:
-      - name: hellogrpc3
+      - name: k8sgrpcsv
         env:
         - name: PROJECT_ENV
           value: "test"

@@ -3,7 +3,7 @@ pipeline {
     label 'common'
   }
   environment {
-    APP_NAME = 'hellogrpc3'
+    APP_NAME = 'k8sgrpcsv'
   }
   stages {
     stage('notify-start') {

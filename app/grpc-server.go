@@ -1,8 +1,8 @@
 package app
 
 import (
-	"hellogrpc3/app/handlers"
-	"hellogrpc3/proto"
+	"k8sgrpcsv/app/handlers"
+	"k8sgrpcsv/proto"
 	"log"
 	"net"
 

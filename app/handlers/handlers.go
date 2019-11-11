@@ -2,7 +2,7 @@ package handlers
 
 import (
 	"context"
-	"hellogrpc3/proto"
+	"k8sgrpcsv/proto"
 )
 
 // GrpcServer implementation for authservice.proto

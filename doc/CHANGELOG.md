@@ -1,4 +1,4 @@
-# hellogrpc3
+# k8sgrpcsv
 
 ## v1.0.0
 

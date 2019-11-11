@@ -2,7 +2,7 @@ package database
 
 import (
 	"fmt"
-	"hellogrpc3/pkg/configs"
+	"k8sgrpcsv/pkg/configs"
 
 	_ "github.com/go-sql-driver/mysql" //go-lint
 	"github.com/go-xorm/xorm"

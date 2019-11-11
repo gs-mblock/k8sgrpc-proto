@@ -2,7 +2,7 @@ package database
 
 import (
 	"fmt"
-	"hellogrpc3/pkg/configs"
+	"k8sgrpcsv/pkg/configs"
 
 	"github.com/go-redis/redis"
 )

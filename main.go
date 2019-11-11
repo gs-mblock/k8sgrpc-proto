@@ -1,8 +1,8 @@
 package main
 
 import (
-	"hellogrpc3/app"
-	"hellogrpc3/pkg/configs"
+	"k8sgrpcsv/app"
+	"k8sgrpcsv/pkg/configs"
 	"log"
 	"os"
 	"os/signal"

@@ -1,0 +1,28 @@
+version: '3'
+services:
+  box-api:
+    restart: always
+    image: liam1803/k8sgrpcsv:v1.0.0
+    ports:
+      - "7008:7000"
+    environment:
+      PROJECT_ENV: dev       
+      SERVER_HTTP_Port: 7000
+      API_VERSION: docker:2019-11-11 09:38
+
+    ##dev
+    # volumes:
+    #    - ~/Downloads/mblock/gitlab/go/mbContentPlatform/deploy/docker/build:/home  
+
+    ## other:
+    # cd docker-compose.yml filePath
+    # docker-compose up
+    # docker-compose down
+    # docker ps
+    # docker container exec -it docker_box-api_1 /bin/sh
+    # cd log
+    # ls
+    # cat d-2019-09-24-2.log -n
+    
+    #/etc/hosts
+    # 127.0.0.1  platforms-test.makeblock.com

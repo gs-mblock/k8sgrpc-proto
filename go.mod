@@ -1,4 +1,4 @@
-module hellogrpc3
+module k8sgrpcsv
 
 go 1.13
 

@@ -10,12 +10,12 @@ type: kubernetes.io/dockerconfigjson
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: hellogrpc3
+  name: k8sgrpcsv
 spec:
   template:
     metadata:
       labels:
-        app: hellogrpc3
+        app: k8sgrpcsv
         version: v1
     spec:
       restartPolicy: Always
@@ -23,8 +23,8 @@ spec:
       - name: docker-secret
       containers:
       - imagePullPolicy: Always
-        name: hellogrpc3
-        image: hellogrpc3
+        name: k8sgrpcsv
+        image: k8sgrpcsv
         resources:
           requests:
             cpu: 2m
@@ -39,35 +39,35 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: hellogrpc3
+  name: k8sgrpcsv
   labels:
-    app: hellogrpc3
+    app: k8sgrpcsv
 spec:
   ports:
   - name: grpc
     port: 7000
     targetPort: 7000
   selector:
-    app: hellogrpc3
+    app: k8sgrpcsv
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: hellogrpc3
+  name: k8sgrpcsv
 spec:
   hosts:
-  - hellogrpc3
+  - k8sgrpcsv
   http:
   - route:
     - destination:
-        host: hellogrpc3
+        host: k8sgrpcsv
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
-  name: hellogrpc3
+  name: k8sgrpcsv
 spec:
-  host: hellogrpc3
+  host: k8sgrpcsv
   trafficPolicy:
     loadBalancer:
       simple: RANDOM
