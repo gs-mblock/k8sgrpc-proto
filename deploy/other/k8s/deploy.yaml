@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: grpcsv
+  name: grpcsv
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: grpcsv
+  template:
+    metadata:
+      labels:
+        run: grpcsv
+    spec:
+      containers:
+      - name: grpcsv
+        image: liam1803/k8sgrpcsv:v1.0.0
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: grpcsv
+  name: grpcsv
+spec:
+  ports:
+  - name: grpc
+    port: 80
+    targetPort: 3001
+  selector:
+    run: grpcsv
+  sessionAffinity: None
+  type: ClusterIP

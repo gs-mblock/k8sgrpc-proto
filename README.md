@@ -28,3 +28,7 @@ go mod tidy
 1. docker 发布：deploy/docker-image.sh
 2. docker test： docker-compose up
 3. k8s test：k8s-dev-c.sh
+
+## TODO
+
+deploy/other 无istio ,也无法远程调试grpc ;
