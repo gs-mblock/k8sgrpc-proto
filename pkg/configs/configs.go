@@ -25,7 +25,7 @@ type config struct {
 		Prefix string `default:"hellogrpc3|"`
 	}
 	// my
-	ServerGRPCPort string `env:"SERVER_GRPC_Port" default:"7000"`
+	ServerGRPCPort string `env:"SERVER_GRPC_Port" default:"7001"`
 	GrpcUser       string `env:"GRPC_USER" default:"localhost:7001"`
 }
 
