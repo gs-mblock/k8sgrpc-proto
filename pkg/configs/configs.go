@@ -11,6 +11,7 @@ var EnvConfig *config
 
 type config struct {
 	ProjectEnv string `env:"PROJECT_ENV" default:"dev"`
+	APIVersion string `env:"API_VERSION" default:"Commit ID"`
 	Mysql      struct {
 		Host   string `default:"rm-wz912s848qk08h72ceo.mysql.rds.aliyuncs.com"`
 		Port   string `default:"3306"`

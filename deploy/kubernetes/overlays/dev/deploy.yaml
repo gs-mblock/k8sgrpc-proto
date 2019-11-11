@@ -10,3 +10,5 @@ spec:
         env:
         - name: PROJECT_ENV
           value: "dev"
+        - name: API_VERSION
+          value: "dev-2019-11-11:10:48"

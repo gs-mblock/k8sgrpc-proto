@@ -1,4 +1,4 @@
-namespace: dev-mblock
+namespace: dev-liam-grpc
 
 bases:
 - ../../base
@@ -8,7 +8,7 @@ resources:
 
 replicas:
 - name: k8sgrpcsv
-  count: 1
+  count: 3
 
 patchesStrategicMerge:
 - deploy.yaml

@@ -1,6 +1,6 @@
 version: '3'
 services:
-  box-api:
+  grpc-sv1:
     restart: always
     image: liam1803/k8sgrpcsv:v1.0.0
     ports:
