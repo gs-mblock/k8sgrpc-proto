@@ -11,7 +11,7 @@ spec:
         - name: PROJECT_ENV
           value: "dev"
         - name: API_VERSION
-          value: "dev-2019-11-11:11:48"
+          value: "dev-2019-11-11:14:22"
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
