@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package user;
+
+message CheckTokenReq {
+	string token = 1;
+	int32 type =2; // 类型，默认0
+}
+
+message CheckTokenResp {
+	int32 code =1; //0 OK
+	string message =2; // 结果
+	map<string,string> data = 3; //用户信息
+}
+
+service DemoService {
+	rpc CheckToken(CheckTokenReq) returns (CheckTokenResp);
+}

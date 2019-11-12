@@ -1,8 +1,16 @@
 Basepath=$(cd `dirname $0`; pwd)
-cd ${Basepath}
+#echo ${Basepath}
+echo "---start---"
+##############################
 
-protoc -I/usr/local/include -I. \
-	-I$GOPATH/src \
-	-I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
-	--go_out=plugins=grpc:. \
-	./demo.proto
+# demo
+cd ${Basepath}/demo
+protoc --go_out=plugins=grpc:. demo.proto
+
+# user
+cd ${Basepath}/user
+protoc --go_out=plugins=grpc:. user.proto
+
+# 
+echo "---finish---"
+# end

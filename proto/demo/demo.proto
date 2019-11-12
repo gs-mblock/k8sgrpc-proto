@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package proto;
+package demo;
 
 message SayHelloReq {
 	string name = 1;
