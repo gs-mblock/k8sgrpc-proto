@@ -2,9 +2,6 @@
 
 grpc公共的 proto API;
 
-## tool
-
-
 ## run更新
 
 $ protoc.sh
@@ -19,7 +16,6 @@ go mod tidy
 
 ## 使用
 
+其它项目：go get github.com/gs-mblock/k8sgrpc-proto
 
 ## TODO
-
-
