@@ -1,19 +1,13 @@
-# k8sgrpcsv
+# API proto
 
-grpc test,k8s 部署最简单的grpc server;
+grpc公共的 proto API;
 
 ## tool
 
-export PROJECT_ENV="localhost" && go run main.go
-echo $GRPC_HOST
 
-## install
+## run更新
 
-go mod tidy
-
-## run
-
-go run main.go
+$ protoc.sh
 
 ## install
 
@@ -25,10 +19,7 @@ go mod tidy
 
 ## 使用
 
-1. docker 发布：deploy/docker-image.sh
-2. docker test： docker-compose up
-3. k8s test：k8s-dev-c.sh
 
 ## TODO
 
-deploy/other 无istio ,也无法远程调试grpc ;
+
